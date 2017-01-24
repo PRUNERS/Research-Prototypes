@@ -1,0 +1,75 @@
+#+TITLE:     DAMPI
+#+AUTHOR:    Simone Atzeni
+#+EMAIL:     simone@cs.utah.edu
+#+DATE:      2015-04-06 Tue
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+
+* License
+Copyright (c) 2015, Lawrence Livermore National Security, LLC.
+
+Written by Anh Vo, Sriram Aananthakrishnan, Ganesh Gopalakrishnan,
+Bronis R. de Supinski, Martin Schulz, and Greg Bronevetsky
+
+Contact email: schulzm@llnl.gov, LLNL-CODE-647203
+
+All rights reserved - please read information in "LICENSE".
+
+* Introduction
+Distributed Analyzer for MPI (DAMPI) -  A scalable formal verification tool.
+
+This project is Work in Progress.
+
+* Configuration
+
+Enable/Disable modules in the configuration file "pnmpi/testpnmpi.conf".
+
+* Installation
+
+#+BEGIN_SRC sh :exports code
+./env-setup.sh
+make all
+sudo make install
+#+END_SRC
+
+* Environment
+
+#+BEGIN_SRC sh :exports code
+export PATH=/usr/local/dampi/bin:$PATH
+#+END_SRC
+
+Insert the export command in your "~/.bashrc" to set the environment
+permanently.
+
+* Usage
+
+Examples:
+
+#+BEGIN_SRC sh :exports code
+cd tests
+#+END_SRC
+
+Example with no non-determinism:
+
+#+BEGIN_SRC sh :exports code
+dmacc -I/usr/include/mpich2 monte.c -o monte
+dmaexec -N 2 monte
+scheduler -n 2 -k 4 -p monte
+#+END_SRC
+
+Example with non-determinism:
+
+#+BEGIN_SRC sh :exports code
+dmacc -I/usr/include/mpich2 wildcard_Recv_three_matches.c -o wildcard_Recv_three_matches
+dmaexec -N 4 ./wildcard_Recv_three_matches
+scheduler -n 4 -k 1 -p ./wildcard_Recv_three_matches
+#+END_SRC

@@ -1,0 +1,10 @@
+#!/bin/bash
+##### These lines are for Moab
+#MSUB -l partition=cab
+#MSUB -l walltime=86400
+#MSUB -l nodes=1
+#MSUB -q pbatch
+#MSUB -o moabconf.out
+#MSUB -V
+##### These are shell commands
+$PWD/job.sh

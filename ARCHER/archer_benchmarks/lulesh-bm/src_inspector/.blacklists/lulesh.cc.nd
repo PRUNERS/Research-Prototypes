@@ -1,0 +1,15 @@
+# function:_ZL17CalcForceForNodesR6Domain
+1144,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+1145,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+1146,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+1143,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+# function:_ZL24CalcAccelerationForNodesR6Domaini
+1173,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+1175,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+1174,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+1172,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+# function:_ZL20CalcPositionForNodesR6Domaindi
+1243,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+1244,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+1245,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+1241,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src

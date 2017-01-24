@@ -1,0 +1,38 @@
+SHELL = /bin/sh
+.SUFFIXES: .cc .o
+
+MPI_INC = /opt/local/include/openmpi
+MPI_LIB = /opt/local/lib
+
+SERCXX = g++ -DUSE_MPI=0
+MPICXX = mpig++ -cc=clang -I$(HOME)/usr/include -DUSE_MPI=0 -DSIZE=$(SIZE)
+CXX = $(MPICXX)
+
+SOURCES2.0 = \
+	lulesh.cc \
+	lulesh-comm.cc \
+	lulesh-viz.cc \
+	lulesh-util.cc \
+	lulesh-init.cc
+OBJECTS2.0 = $(SOURCES2.0:.cc=.o)
+
+CXXFLAGS = -g -O0 -fopenmp -fPIC -I. -Wall -fsanitize=thread
+LDFLAGS = -g -O0 -pie -fopenmp -fsanitize=thread -L$(HOME)/usr/lib/intelomprt -lstdc++
+
+.cc.o: lulesh.h
+	@echo "Building $<"
+	$(CXX) -c $(CXXFLAGS) -o $@  $<
+
+all: lulesh.vanillatsan lulesh.archertsan
+
+lulesh.vanillatsan: $(OBJECTS2.0)
+	@echo "Linking"
+	$(CXX) $(OBJECTS2.0) $(LDFLAGS) -liomp5 -lm -o $@
+
+lulesh.archertsan: $(OBJECTS2.0)
+	$(CXX) $(OBJECTS2.0) $(LDFLAGS) -liomp5_tsan -lm -o $@
+
+clean:
+	/bin/rm -f *.o *~ $(OBJECTS)
+	/bin/rm -rf *.dSYM
+	/bin/rm -rf *.ll *.bc *.ll *.s *.opt .blacklists

@@ -1,0 +1,10 @@
+#!/bin/bash
+##### These lines are for Moab
+#MSUB -l partition=cab
+#MSUB -l walltime=36000
+#MSUB -l nodes=1
+#MSUB -q pbatch
+#MSUB -o mcb_tsan_out
+#MSUB -V
+##### These are shell commands
+/g/g90/atzeni1/benchmarks/ArcherBenchmarks/mcb-bm/scripts/job_tsan.sh

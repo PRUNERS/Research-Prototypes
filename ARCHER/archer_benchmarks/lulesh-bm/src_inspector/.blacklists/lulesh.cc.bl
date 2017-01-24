@@ -1,0 +1,17 @@
+# Blacklist file
+line:1142,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1143,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1144,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1145,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1146,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1171,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1172,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1173,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1174,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1175,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1240,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1241,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1243,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1244,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+line:1245,./lulesh.cc,/g/g90/atzeni1/benchmarks/ArcherBenchmarks/lulesh-bm/src
+
