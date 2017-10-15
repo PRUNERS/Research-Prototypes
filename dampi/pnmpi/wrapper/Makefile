@@ -49,6 +49,7 @@ all: $(TARGET)
 
 dummy.fct: dummy.c
 	$(MPICC) -E dummy.c | gawk -f join_lines | grep -e "PMPI_" | grep -v "_FN" | grep -v f2c | grep -v c2f | sed 's/(/ (/' | grep -v PMPI_Pcontrol | grep -v PMPI_Type_count > dummy.fct
+	# $(MPICC) -E dummy.c | sed 's/__attribute__[(][(]visibility[(]\"default\"[)][)][)][[:space:]]//' | gawk -f join_lines | sed -e 's/  */ /g' | grep -e "PMPI_" | grep -v "_FN" | grep -v f2c | grep -v c2f | sed 's/(/ (/' | grep -v PMPI_Pcontrol | grep -v PMPI_Type_count > dummy.fct
 
 wrapper.c: $(PROTOFILE) $(FCTFILE) $(WRAPPERC)
 	$(WR) -p $(PROTOFILE) -f $(FCTFILE) -w $(WRAPPERC) -o wrapper.c
